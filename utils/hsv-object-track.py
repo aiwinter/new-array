@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-im = cv2.imread('../images/a.jpg')
+im = cv2.imread('./images/a.jpg')
 # Convert BGR to HSV
 hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
 # define range of blue color in HSV
@@ -16,5 +16,5 @@ cv2.imshow('mask',mask)
 cv2.imshow('res',res)
 k = cv2.waitKey(5) & 0xFF
 if k == 27:
-
-    cv2.destroyAllWindows()
+        break
+cv2.destroyAllWindows()

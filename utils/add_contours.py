@@ -90,3 +90,6 @@ def process(filename, key):
     #imageresized = cv2.resize(image,(2048,2048),dim,interpolation = cv2.INTER_AREA)
     cv2.imwrite( 'i/image_{}.jpg'.format(key) ,QR_final )
     print 'image_{}.jpg'.format(key) 
+
+
+process("../images/a.jpg")
