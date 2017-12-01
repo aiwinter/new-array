@@ -88,8 +88,9 @@ def process(filename, key):
     #dim = (100, int(image.shape[0] *r))
 
     #imageresized = cv2.resize(image,(2048,2048),dim,interpolation = cv2.INTER_AREA)
-    cv2.imwrite( 'i/image_{}.jpg'.format(key) ,QR_final )
+    cv2.imshow('closing',lab)
+    cv2.imwrite( '../results/image_{}.jpg'.format(key) ,QR_final )
     print 'image_{}.jpg'.format(key) 
 
 
-process("../images/a.jpg")
+process("../images/a.jpg",1)
