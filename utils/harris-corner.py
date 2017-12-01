@@ -2,11 +2,11 @@ import cv2
 import numpy as np
 
 #filename = '../beetle/1498865167capt0000.jpg'
-img = cv2.imread('../beetle/1498865167capt0000.jpg')
+img = cv2.imread('../1498866869capt0000.png')
 
 height, width = img.shape[:2]
-max_height = 300
-max_width = 300
+max_height = 1024
+max_width = 1024
 
 scaling_factor = max_width / float(width)
 img = cv2.resize(img, None, fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA)
