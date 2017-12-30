@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 
-img = cv2.imread('../1498866869capt0000.png')
+img = cv2.imread('../a.png')
 
 height, width = img.shape[:2]
 max_height = 2048

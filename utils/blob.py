@@ -5,7 +5,18 @@ import cv2
 import numpy as np;
 
 # Read image
-im = cv2.imread("../images/a.jpg", cv2.IMREAD_GRAYSCALE)
+im = cv2.imread("../a.png", cv2.IMREAD_GRAYSCALE)
+
+height, width = im.shape[:2]
+max_height = 1024
+max_width = 1024
+
+scaling_factor = max_width / float(width)
+im = cv2.resize(im, None, fx=scaling_factor, fy=scaling_factor, interpolation=cv2.INTER_AREA)
+
+height, width = im.shape[:2]
+
+print height, width
 
 # Setup SimpleBlobDetector parameters.
 params = cv2.SimpleBlobDetector_Params()
