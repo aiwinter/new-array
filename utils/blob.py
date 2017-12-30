@@ -16,7 +16,7 @@ im = cv2.resize(im, None, fx=scaling_factor, fy=scaling_factor, interpolation=cv
 
 height, width = im.shape[:2]
 
-print height, width
+print (height, width)
 
 # Setup SimpleBlobDetector parameters.
 params = cv2.SimpleBlobDetector_Params()
