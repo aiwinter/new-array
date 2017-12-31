@@ -1,3 +1,8 @@
+import urllib.request
+import cv2
+import numpy as np
+import os
+
 def find_uglies():
     match = False
     for file_type in ['neg']:
@@ -13,3 +18,5 @@ def find_uglies():
                         os.remove(current_image_path)
                 except Exception as e:
                     print(str(e))
+
+find_uglies()

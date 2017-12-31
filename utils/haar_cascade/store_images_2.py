@@ -1,7 +1,12 @@
+import urllib.request
+import cv2
+import numpy as np
+import os
+
 def store_raw_images():
-    neg_images_link = '//image-net.org/api/text/imagenet.synset.geturls?wnid=n07942152'   
+    neg_images_link = 'http://image-net.org/api/text/imagenet.synset.geturls?wnid=n07942152'   
     neg_image_urls = urllib.request.urlopen(neg_images_link).read().decode()
-    pic_num = 953
+    pic_num = 891
     
     if not os.path.exists('neg'):
         os.makedirs('neg')
@@ -18,3 +23,7 @@ def store_raw_images():
             
         except Exception as e:
             print(str(e)) 
+
+
+
+store_raw_images()

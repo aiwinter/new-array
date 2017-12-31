@@ -4,7 +4,7 @@ import numpy as np
 import os
 
 def store_raw_images():
-    neg_images_link = '//image-net.org/api/text/imagenet.synset.geturls?wnid=n00523513'   
+    neg_images_link = 'http://image-net.org/api/text/imagenet.synset.geturls?wnid=n00523513'   
     neg_image_urls = urllib.request.urlopen(neg_images_link).read().decode()
     pic_num = 1
     
@@ -23,3 +23,5 @@ def store_raw_images():
             
         except Exception as e:
             print(str(e))  
+
+store_raw_images()
